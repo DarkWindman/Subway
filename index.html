@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcecKQpAAAAAGo6T3wyRMvvyYKqGFNMalZN3yN8"></script>
     <meta name="robots" content="index, follow">
+    <script>
+  function onClick(e) {
+    e.preventDefault();
+    grecaptcha.enterprise.ready(async () => {
+      const token = await grecaptcha.enterprise.execute('6LcecKQpAAAAAGo6T3wyRMvvyYKqGFNMalZN3yN8', {action: 'LOGIN'});
+    });
+  }
+</script>
+    <meta name="google-site-verification" content="v6flY6ShVLOld-nAG-urv1OYGjtBmUdnqH_T-gc8s_A" />
     <title>Мій перший веб-сайт</title>
     <style>
-    <meta name="google-site-verification" content="v6flY6ShVLOld-nAG-urv1OYGjtBmUdnqH_T-gc8s_A" />
+    
+        
         body {
             font-family: Arial, sans-serif;
             margin: 0;
